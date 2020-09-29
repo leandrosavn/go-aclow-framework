@@ -44,7 +44,7 @@ func (t *UserLogin) Address() []string { return []string{"user-login"} }
 
 func (t *UserLogin) Start(app *aclow.App) {
 	t.app = app
-	createUserAdmin(app)
+	//createUserAdmin(app)
 }
 
 func (t *UserLogin) Execute(msg aclow.Message, call aclow.Caller) (aclow.Message, error) {

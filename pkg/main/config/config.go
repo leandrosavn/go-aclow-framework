@@ -20,18 +20,6 @@ func MongoDbMaxPoolSize() uint64 {
 	return uint64(n)
 }
 
-func SQLHost() string {
-	return os.Getenv("SQL_HOST")
-}
-
-func SQLUser() string {
-	return os.Getenv("SQL_USER")
-}
-
-func SQLPassword() string {
-	return os.Getenv("SQL_PASSWORD")
-}
-
 func LDAPBase() string {
 	return os.Getenv("LDAP_BASE")
 }
@@ -76,13 +64,4 @@ func LDAPGroupFilter() string {
 
 func LDAPAttributes() string {
 	return os.Getenv("LDAP_ATTRIBUTES")
-}
-
-func MemReportThreshold() int {
-	m := os.Getenv("MEM_REPORT_THRESHOLD")
-	if m == "" {
-		return 80
-	}
-	n, _ := strconv.Atoi(m)
-	return n
 }

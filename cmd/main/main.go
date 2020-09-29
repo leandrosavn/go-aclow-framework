@@ -58,7 +58,7 @@ func main() {
 
 	app.Start(startOpt)
 
-	connectOnMongo(app)
+	//connectOnMongo(app)
 
 	app.RegisterModule("api", api.Nodes())
 
